@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Think Less , Calculate More </h1>
+        <form name="form1">
+            <input id="calc" type="text" name="answer" placeholder="0">
+            <br><br>
+            <input type="button" value="ln" class="base" onclick="form1.answer.value = Math.log(form1.answer.value)">
+
+            <input type="button" value="(" class="base" onclick="form1.answer.value += '('">
+            <input type="button" value=")" class="base" onclick="form1.answer.value += ')'">
+            <input type="button" value="sin" class="base" onclick="form1.answer.value = Math.sin(form1.answer.value)">
+            <input type="button" value="%" class="base" onclick="form1.answer.value += '%'">
+            <input type="button" value="C" class="orange" onclick="form1.answer.value = ''">
+
+
+
+            <input type="button" value="x²" class="base" onclick="form1.answer.value = Math.pow(form1.answer.value, 2)">
+            <input type="button" value="x³" class="base" onclick="form1.answer.value = Math.pow(form1.answer.value, 3)">
+            <input type="button" value="1/x" class="base" onclick="form1.answer.value = 1 / form1.answer.value">
+            <input type="button" value="cos" class="base" onclick="form1.answer.value = Math.cos(form1.answer.value)">
+
+
+            <input type="button" value="tan" class="base" onclick="form1.answer.value = Math.tan(form1.answer.value)">
+
+            <input type="button" value="Del" class="orange" onclick="clearEntry() = ''" class="base">
+
+
+            <input type="button" value="^" class="base" onclick="form1.answer.value += ''">
+
+
+            <input type="button" value="√" class="base" onclick="form1.answer.value = Math.sqrt(form1.answer.value)">
+            <input type="button" value="7" class="nom" onclick="form1.answer.value += '7'">
+            <input type="button" value="8" class="nom" onclick="form1.answer.value += '8'">
+
+            <input type="button" value="9" class="nom" onclick="form1.answer.value += '9'">
+            <input type="button" value="÷" class="orange" onclick="form1.answer.value += '÷'">
+
+
+            <input type="button" value="π" class="base" onclick="form1.answer.value += Math.PI">
+
+            <input type="button" value="log" class="base" onclick="form1.answer.value = Math.log10(form1.answer.value)">
+            <input type="button" value="4" class="nom" onclick="form1.answer.value += '4'">
+
+            <input type="button" value="5" class="nom" onclick="form1.answer.value += '5'">
+
+            <input type="button" value="6" class="nom" onclick="form1.answer.value += '6'">
+            <input type="button" value="-" class="orange" onclick="form1.answer.value += '-'">
+
+            <input type="button" value="∜" class="base" onclick="form1.answer.value = Math.sqrt(form1.answer.value ,4)">
+
+            <input type="button" value="10x" class="base" onclick="ten()"></button>
+            <input type="button" value="1" class="nom" onclick="form1.answer.value += '1'">
+
+
+
+
+
+            <input type="button" value="2" class="nom" onclick="form1.answer.value += '2'">
+            <input type="button" value="3" class="nom" onclick="form1.answer.value += '3'">
+
+            <input type="button" value="+" class="orange" onclick="form1.answer.value += '+'">
+
+
+            <input type="button" value="x4" class="base" onclick="form1.answer.value = Math.pow(form1.answer.value, 4)">
+
+
+
+
+            <input type="button" value="e" class="base" onclick="form1.answer.value += Math.E">
+            <input type="button" value="0" id="zero" onclick="form1.answer.value += '0'">
+            <input type="button" value="." class="nom" onclick="form1.answer.value += '.'">
+            <input type="button" value="=" class="orange" onclick="form1.answer.value = eval(form1.answer.value)">
+        </form>
+        <script>
+            function clearEntry() {
+                form1.answer.value = form1.answer.value.slice(0, -1);
+            }
+
+        </script>
+
+    </div>
+
+
+
+</body>
+
+</html>
